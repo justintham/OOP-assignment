@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.time.format.DateTimeFormatter;  
 import java.time.LocalDateTime;    
 
-public class TravelTicketingSystem {
+public class ProcessTicketing extends TravelTicketing{
     
     private static char choice2;
     private static char choice2_upper;
@@ -78,6 +78,7 @@ public class TravelTicketingSystem {
                 }
     }
      
+
     public static void main(String[] args){
     topic();      
     Scanner scanner = new Scanner(System.in);

@@ -17,7 +17,7 @@ import javax.swing.JTextField;
  *
  * @author Justin Tham
  */
-public class login extends javax.swing.JFrame {
+public class TravelTicketing extends javax.swing.JFrame {
 
     private Component frame;
     static int count = 0;
@@ -25,7 +25,7 @@ public class login extends javax.swing.JFrame {
     /**
      * Creates new form showpassword
      */
-    public login() {
+    public TravelTicketing() {
         initComponents();
     }
 
@@ -99,7 +99,7 @@ public class login extends javax.swing.JFrame {
                 loginActionPerformed(evt);
             }
         });
-        getContentPane().add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 340, 262, 75));
+        getContentPane().add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 262, 75));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel4.setText("Enter username: ");
@@ -135,7 +135,7 @@ public class login extends javax.swing.JFrame {
        if(username.equals("abc")&&psd.equals("abc")){
             JOptionPane.showMessageDialog(frame, "Login Successfully");
             dispose();
-            TravelTicketingSystem system = new TravelTicketingSystem();
+            ProcessTicketing system = new ProcessTicketing();
             system.main(null);
         }
         else{
@@ -166,21 +166,23 @@ public class login extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TravelTicketing.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TravelTicketing.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TravelTicketing.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TravelTicketing.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new login().setVisible(true);
+                new TravelTicketing().setVisible(true);
             }
         });
     }
@@ -193,7 +195,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JButton login;
+    protected javax.swing.JButton login;
     private javax.swing.JTextField loginid;
     private javax.swing.JPasswordField password;
     // End of variables declaration//GEN-END:variables
